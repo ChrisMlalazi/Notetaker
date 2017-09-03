@@ -25,9 +25,40 @@ body {
     clear: both;
 }
 
-/*#app {
-    display: none;
-}*/
+/******************
+OVERLAY
+
+******************/
+#overlay {
+    position: fixed;
+ 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #A9A9A9;
+    z-index: 2;
+    /*cursor: pointer;*/
+}
+
+.hello {
+ padding: 20px;
+ color: white;
+ text-align: center;
+ margin-top: 150px;
+ height: auto;
+ background-color: orange;
+ font-style: italic;
+ font-size: 1.2em;
+}
+
+
+/***************
+
+BUTTONS
+****************/
 
 .btn-primary{
     margin-top: 20px;
@@ -125,6 +156,8 @@ a.button:hover {
 #wrapper {
     display: none;
 }
+
+
 
 
 @media only screen and (min-width: 599px) {
