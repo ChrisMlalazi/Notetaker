@@ -112,7 +112,11 @@ a.button:hover {
 }
 
 .end {
-    margin-top: 50px;
+    margin-top: 10px;
+}
+
+.advert{
+    margin-bottom: 20px;
 }
 
 #area {
