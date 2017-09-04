@@ -11,6 +11,8 @@ function off() {
 
 // end of overlay
 
+
+//check if HTML5 storage is supported
 function check_web_storage_support() {
     if(typeof(Storage) !== "undefined") {
         return(true);
@@ -49,7 +51,6 @@ function display_saved_note() {
 
     document.getElementById('area').value = result;
 }
-
 
 
 function clear() {
