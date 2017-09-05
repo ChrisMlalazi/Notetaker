@@ -1,6 +1,6 @@
 
 
-// Overlay
+// Turning overlay on and off
 function on() {
     document.getElementById("overlay").style.display = "block";
 }
@@ -23,24 +23,7 @@ function check_web_storage_support() {
     }
 }
 
-function save() {
-    if(check_web_storage_support() == true) {
-        var area = document.getElementById("area");
-        if(area.value != '') {
-            localStorage.setItem("note", area.value);
-        }
-        else {
-            alert("Write someting to save");
-        }
-    }
-}
-
-
-var home = document.getElementById('notepad').innerHTML;
-var saveClear = document.getElementById('saveClear').innerHTML;
-display_saved_note();
-
-
+// This function retrieves saved data
 function display_saved_note() {
     if(check_web_storage_support() == true) {
         result = localStorage.getItem('note');
@@ -53,9 +36,35 @@ function display_saved_note() {
 }
 
 
+// Implement functionality for the "Save" button
+function save() {
+    if(check_web_storage_support() == true) {
+        var area = document.getElementById("area");
+        if(area.value != '') {
+            localStorage.setItem("note", area.value);
+        }
+        else {
+            alert("Write someting to save");
+        }
+    }
+}
+
+// Implement functionality for the "Clear" button
 function clear() {
     document.getElementById('area').value = "";
 }
+
+// This displays the saved note.
+
+var home = document.getElementById('notepad').innerHTML;
+var saveClear = document.getElementById('saveClear').innerHTML;
+display_saved_note();
+
+
+
+
+
+
 
 
 
